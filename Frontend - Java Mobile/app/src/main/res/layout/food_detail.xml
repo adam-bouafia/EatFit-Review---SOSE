@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/foodDetail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageButton
+        android:id="@+id/toLoginFD"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="580dp"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher_foreground"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/home_fooddetail"
+        android:layout_width="68dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="289dp"
+        android:layout_marginBottom="579dp"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="centerInside"
+        android:src="?android:attr/actionModeWebSearchDrawable"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="108dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="587dp"
+        android:fontFamily="@font/dr_sugiyama"
+        android:text="EatFit"
+        android:textAlignment="center"
+        android:textColor="#FF6347"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="358dp"
+        android:layout_height="562dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/foodTitle"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:text="Food Name"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textColor="#4682B4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/foodImage"
+                android:layout_width="match_parent"
+                android:layout_height="142dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/foodDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Description"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:textColor="#4682B4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textPlaceholder1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Ratings"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:textColor="#4682B4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/globalScore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Ratings"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+                android:textColor="#4682B4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/foodRatings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Ratings"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:textColor="#4682B4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textPlaceholder2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Reviews"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                android:textColor="#4682B4" />
+
+
+            <ListView
+                android:id="@+id/listViewReviews"
+                android:layout_width="wrap_content"
+                android:layout_height="6000dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="1dp"
+                android:scrollbarSize="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/buttonNewReview"
+        android:layout_width="51dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="241dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="585dp"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

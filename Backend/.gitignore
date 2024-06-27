@@ -1,0 +1,8 @@
+.metadata/
+.DS_Store
+FoodDetailsProsumer/.classpath
+**/target/
+target/
+target/*
+**/Servers/
+Servers/

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="203dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="126dp"
+        android:layout_marginBottom="587dp"
+        android:fontFamily="@font/dr_sugiyama"
+        android:text="@string/eat_fit"
+        android:textAlignment="center"
+        android:textColor="#FF6347"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:background="#4682B4"
+        android:scaleType="fitCenter"
+        android:src="@drawable/home_icon1"
+        app:tint="#FFFFFF" />
+
+
+    <ImageButton
+        android:id="@+id/toLogin"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="328dp"
+        android:layout_marginBottom="672dp"
+        android:background="#FF6347"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="#FFFFFF" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        tools:layout_editor_absoluteY="640dp" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="360dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/eatfit_app"
+        android:textColor="#4682B4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:boxBackgroundMode="outline"
+        app:boxBackgroundColor="#F5F5F5"
+        app:boxStrokeColor="#FF6347"
+        app:boxCornerRadiusTopStart="50dp"
+        app:boxCornerRadiusTopEnd="50dp"
+        app:boxCornerRadiusBottomStart="50dp"
+        app:boxCornerRadiusBottomEnd="50dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/SearchID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/search_for_food"
+            android:textColorHint="#808080"
+            android:textColor="#000000"
+            android:gravity="center" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="412dp"
+        android:backgroundTint="#32CD32"
+        android:text="@string/seearch"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="#32CD32" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

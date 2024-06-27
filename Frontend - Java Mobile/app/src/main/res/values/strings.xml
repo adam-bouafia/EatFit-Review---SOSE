@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Application</string>
+    <string name="discover">Discover</string>
+    <string name="eatfit_app">EATFIT APP</string>
+    <string name="search">Search</string>
+    <string name="search_for_food">Search for food</string>
+    <string name="eat_fit">EAT FIT</string>
+    <string name="seearch">Search</string>
+</resources>
