@@ -55,7 +55,7 @@ Opening the Android application, you can search for food items. Clicking on a re
 #### Project Structure
 
 
-
+```
 EatFit & Review SOSE Project/
 ├── Docs
 │   ├── NGINX Load Balancer SOSE.pdf
@@ -151,7 +151,7 @@ EatFit & Review SOSE Project/
 │   └── SOSE_Project.mdzip
 ├── .gitignore
 └── LICENSE
-
+```
 ### Detailed Usage
 
 After installing the app, you can start exploring the wide variety of foods by using the search functionality. Here are some steps to get you started:
