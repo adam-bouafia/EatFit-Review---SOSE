@@ -54,6 +54,8 @@ Opening the Android application, you can search for food items. Clicking on a re
 
 #### Project Structure
 
+
+
 EatFit & Review SOSE Project/
 ├── Docs
 │   ├── NGINX Load Balancer SOSE.pdf
