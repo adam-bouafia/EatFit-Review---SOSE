@@ -11,7 +11,7 @@ public class Callback implements InvocationCallback<Response>{
 	
 	@Override
 	public void completed(Response response) {
-		// TODO Auto-generated method stub
+		
 		if (response.getStatus() == 200) {
 			messageFromTheServer = response.readEntity(String.class);
 		}
@@ -23,7 +23,7 @@ public class Callback implements InvocationCallback<Response>{
 
 	@Override
 	public void failed(Throwable throwable) {
-		// TODO Auto-generated method stub
+		
 		throwable.printStackTrace();
 	}
 	

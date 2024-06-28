@@ -16,7 +16,7 @@ public class RatingUpdaterImpl implements RatingUpdater {
 	
 	@Override
 	public String addRatings(int userId, String foodId, int tasteRating, int nutritionalvalueRating, int overallsatisfactionRating, int packagingRating, int costumesRating) {
-		// TODO Auto-generated method stub
+		
 		
 		RatingData objToAdd = new RatingData(foodId, userId, tasteRating, nutritionalvalueRating, overallsatisfactionRating, packagingRating, costumesRating);
 		
@@ -39,7 +39,7 @@ public class RatingUpdaterImpl implements RatingUpdater {
 
 	@Override
 	public String getRatingAvgs(String foodId) {
-		// TODO Auto-generated method stub
+		
 		
 		try {
 			return new JSONObject(RatingUpdaterService.getInstance().getRatingAverages(foodId)).toString();
@@ -63,7 +63,7 @@ public class RatingUpdaterImpl implements RatingUpdater {
 
 	@Override
 	public String getGlobalScore(String foodId) {
-		// TODO Auto-generated method stub
+		
 		
 		try {
 			return new JSONObject(RatingUpdaterService.getInstance().getGlobalScore(foodId)).toString();
@@ -77,7 +77,7 @@ public class RatingUpdaterImpl implements RatingUpdater {
 	@Override
 	public void addRatingsAsync(int userId, String foodId, int tasteRating, int nutritionalvalueRating,
 			int overallsatisfactionRating, int packagingRating, int costumesRating, AsyncResponse asyncResponse) throws Exception {
-		// TODO Auto-generated method stub
+		
 		
 		UtilityMethods.consoleLog("exec of asynchronous addRatings method");
 		

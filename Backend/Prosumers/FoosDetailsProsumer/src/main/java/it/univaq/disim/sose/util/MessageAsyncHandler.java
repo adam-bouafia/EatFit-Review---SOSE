@@ -13,7 +13,7 @@ public class MessageAsyncHandler implements AsyncHandler<AggregateRatingsRespons
 	
 	@Override
 	public void handleResponse(Response<AggregateRatingsResponse> res) {
-		// TODO Auto-generated method stub
+		
 		try {
 			aggregateRatingsResponse = res.get();
 		} catch (InterruptedException | ExecutionException e) {

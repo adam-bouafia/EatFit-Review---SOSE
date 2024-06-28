@@ -71,7 +71,7 @@ public class RatingDataDAO_SQLLite implements RatingDataDAO {
 	
 	@Override
 	public boolean insertRatingData(RatingData toAdd) throws SQLException {
-		// TODO Auto-generated method stub
+		
 		try {
 			createDB();
 		} catch (SQLException e1) {
@@ -106,7 +106,7 @@ public class RatingDataDAO_SQLLite implements RatingDataDAO {
 
 	@Override
 	public boolean insertRatingDatas(List<RatingData> toAdd) throws SQLException{
-		// TODO Auto-generated method stub
+		
 		
 		try {
 			createDB();
@@ -168,7 +168,7 @@ public class RatingDataDAO_SQLLite implements RatingDataDAO {
 			e1.printStackTrace();
 		}
 		
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

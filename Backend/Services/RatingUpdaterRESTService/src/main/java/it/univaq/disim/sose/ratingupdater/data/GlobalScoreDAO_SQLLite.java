@@ -77,7 +77,7 @@ public class GlobalScoreDAO_SQLLite implements GlobalScoreDAO{
 			e1.printStackTrace();
 		}
 		
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
@@ -93,7 +93,7 @@ public class GlobalScoreDAO_SQLLite implements GlobalScoreDAO{
 		UtilityMethods.consoleLog("UPDATE SCORE");
 		String sql = "";
 		if (readGlobalScore(newValue.getFoodId()) != null) {
-			// TODO Auto-generated method stub
+			
 			sql = "UPDATE gloabl_score_data SET global_score = ?, number_of_ratings = ? WHERE food_id = ?";
 			
 			try (Connection conn = this.connect();

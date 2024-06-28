@@ -82,7 +82,7 @@ public class ReviewServiceImpl implements ReviewService{
 	@Override
 	public void insertReviewAsync(String foodID, String title, String text, int userID, AsyncResponse asyncResponse)
 			throws Exception {
-		// TODO Auto-generated method stub
+		
 		Utils.consoleLog("foodID: "+ foodID+ " title: "+ title+ " text: "+ text+ " userID: "+ userID);
 		
 		new Thread() {
