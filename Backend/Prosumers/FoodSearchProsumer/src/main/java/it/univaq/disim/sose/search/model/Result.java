@@ -2,6 +2,10 @@ package it.univaq.disim.sose.search.model;
 
 import org.json.JSONObject;
 
+/**
+ * This class represents a search result for a food item, including its ID, label,
+ * category, image, brand, and nutritional information.
+ */
 public class Result {
     private String id;
     private String label;
@@ -11,9 +15,23 @@ public class Result {
     private String brand;
     private Nutrients nutrients;
 
+    /**
+     * Default constructor.
+     */
     public Result() {
     }
 
+    /**
+     * Parameterized constructor to initialize all fields.
+     *
+     * @param id             The ID of the food item.
+     * @param label          The label (name) of the food item.
+     * @param category       The category of the food item.
+     * @param categoryLabel  The label for the category.
+     * @param image          The URL of the image representing the food item.
+     * @param brand          The brand of the food item.
+     * @param nutrients      The nutritional information of the food item.
+     */
     public Result(String id, String label, String category, String categoryLabel, String image, String brand, Nutrients nutrients) {
         this.id = id;
         this.label = label;
@@ -23,6 +41,8 @@ public class Result {
         this.brand = brand;
         this.nutrients = nutrients;
     }
+
+    // Getters and setters for all fields
 
     public String getId() {
         return id;
@@ -80,6 +100,9 @@ public class Result {
         this.nutrients = new Nutrients(nutrientsObject);
     }
 
+    /**
+     * Inner class representing the nutritional information of the food item.
+     */
     public static class Nutrients {
         private Double ENERC_KCAL; // Energy in kcal
         private Double PROCNT; // Protein in g
@@ -87,9 +110,17 @@ public class Result {
         private Double CHOCDF; // Carbohydrate, by difference in g
         private Double FIBTG; // Fiber, total dietary in g
 
+        /**
+         * Default constructor.
+         */
         public Nutrients() {
         }
 
+        /**
+         * Constructor to initialize Nutrients from a JSONObject.
+         *
+         * @param nutrientsObject The JSON object containing nutritional information.
+         */
         public Nutrients(JSONObject nutrientsObject) {
             this.ENERC_KCAL = nutrientsObject.optDouble("ENERC_KCAL", 0);
             this.PROCNT = nutrientsObject.optDouble("PROCNT", 0);
@@ -97,6 +128,8 @@ public class Result {
             this.CHOCDF = nutrientsObject.optDouble("CHOCDF", 0);
             this.FIBTG = nutrientsObject.optDouble("FIBTG", 0);
         }
+
+        // Getters and setters for all fields
 
         public Double getENERC_KCAL() {
             return ENERC_KCAL;
