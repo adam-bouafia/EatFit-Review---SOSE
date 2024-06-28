@@ -22,7 +22,7 @@ public class FoodDetailsAggregatorImpl implements FoodDetailsAggregator {
 		
 		List<RatingData> ratings = RatingDataClient.getAllRatings(foodId);
 		
-		GlobalScoreData movieScore = RatingDataClient.getGlobalScore(foodId);
+		GlobalScoreData foodScore = RatingDataClient.getGlobalScore(foodId);
 		
 		AggregatedRatingData average = new AggregatedRatingData(foodId, -1, 0, 0, 0, 0, 0, 0, 0);
 		average.setTasteRating(new Double(ratings.stream().mapToInt(p -> p.getTasteRating()).average().orElse(0)).intValue());
@@ -30,8 +30,8 @@ public class FoodDetailsAggregatorImpl implements FoodDetailsAggregator {
 		average.setOverallsatisfactionRating(new Double(ratings.stream().mapToInt(p -> p.getOverallsatisfactionRating()).average().orElse(0)).intValue());
 		average.setPackagingRating(new Double(ratings.stream().mapToInt(p -> p.getPackagingRating()).average().orElse(0)).intValue());
 		average.setPriceRating(new Double(ratings.stream().mapToInt(p -> p.getPriceRating()).average().orElse(0)).intValue());
-		average.setGlobalScore(movieScore.getGlobalScore());
-		average.setNumberOfRatings(movieScore.getNumberOfRatings());
+		average.setGlobalScore(foodScore.getGlobalScore());
+		average.setNumberOfRatings(foodScore.getNumberOfRatings());
 		return average;
 	}
 
@@ -50,7 +50,7 @@ public class FoodDetailsAggregatorImpl implements FoodDetailsAggregator {
 				
 				List<RatingData> ratings = RatingDataClient.getAllRatings(foodId);
 				
-				GlobalScoreData movieScore = RatingDataClient.getGlobalScore(foodId);
+				GlobalScoreData foodScore = RatingDataClient.getGlobalScore(foodId);
 				
 				AggregatedRatingData average = new AggregatedRatingData(foodId, -1, 0, 0, 0, 0, 0, 0, 0);
 				average.setTasteRating(new Double(ratings.stream().mapToInt(p -> p.getTasteRating()).average().orElse(0)).intValue());
@@ -58,8 +58,8 @@ public class FoodDetailsAggregatorImpl implements FoodDetailsAggregator {
 				average.setOverallsatisfactionRating(new Double(ratings.stream().mapToInt(p -> p.getOverallsatisfactionRating()).average().orElse(0)).intValue());
 				average.setPackagingRating(new Double(ratings.stream().mapToInt(p -> p.getPackagingRating()).average().orElse(0)).intValue());
 				average.setPriceRating(new Double(ratings.stream().mapToInt(p -> p.getPriceRating()).average().orElse(0)).intValue());
-				average.setGlobalScore(movieScore.getGlobalScore());
-				average.setNumberOfRatings(movieScore.getNumberOfRatings());
+				average.setGlobalScore(foodScore.getGlobalScore());
+				average.setNumberOfRatings(foodScore.getNumberOfRatings());
 				
 				AggregatedDataResponse response = new AggregatedDataResponse();
 				
