@@ -67,7 +67,7 @@ public class SQLiteReviewDAOImpl implements ReviewDAO{
 			}
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} finally {
 			SQLiteDAOFactory.closeDbConnection(res, prep, conn);
@@ -96,7 +96,7 @@ public class SQLiteReviewDAOImpl implements ReviewDAO{
 		return true;
 		} 
 		catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 			return false;
 		}
@@ -124,7 +124,7 @@ public class SQLiteReviewDAOImpl implements ReviewDAO{
 		}
 		catch (SQLException e) {
 
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		finally {
@@ -145,7 +145,7 @@ public class SQLiteReviewDAOImpl implements ReviewDAO{
 
 		}
 		catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		finally {

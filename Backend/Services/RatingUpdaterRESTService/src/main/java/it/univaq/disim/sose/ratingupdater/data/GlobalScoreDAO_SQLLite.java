@@ -20,7 +20,7 @@ public class GlobalScoreDAO_SQLLite implements GlobalScoreDAO{
 		try {
 			Class.forName("org.sqlite.JDBC");
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
+			
 			e1.printStackTrace();
 		}
         String url = "jdbc:sqlite:" + FileURL;
@@ -73,7 +73,7 @@ public class GlobalScoreDAO_SQLLite implements GlobalScoreDAO{
 			
 			
 		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
+			
 			e1.printStackTrace();
 		}
 		
@@ -87,7 +87,7 @@ public class GlobalScoreDAO_SQLLite implements GlobalScoreDAO{
 		try {
 			createDB();
 		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
+			
 			e1.printStackTrace();
 		}
 		UtilityMethods.consoleLog("UPDATE SCORE");

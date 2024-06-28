@@ -14,33 +14,42 @@ import it.univaq.disim.sose.util.Utility;
 
 public class EdamamRestClient {
 
-    private static final String APIKey = "YOUR_APP_KEY";
-    private static final String APP_ID = "YOUR_APP_ID";
+    // API key and application ID for Edamam API
+    private static final String APIKey = "98f6a6aac1d2b1559580d0057468a38a";
+    private static final String APP_ID = "k_dm7b3skf";
     
+    // Endpoint for Edamam Food Details API
     private static final String EdamamFoodDetailsEndpoint = "https://api.edamam.com/api/food-database/v2/nutrients";
     
+    // Method to build the complete URL for API requests
     private static String buildURL() {
         return EdamamFoodDetailsEndpoint + "?app_id=" + APP_ID + "&app_key=" + APIKey;
     }
     
+    // Method to fetch food data from Edamam API given a foodId
     public static FoodData getFoodData(String foodId) {
         WebClient client = WebClient.create(buildURL());
         
+        // Constructing the request body
         JSONObject requestBody = new JSONObject();
         requestBody.put("ingredients", new JSONArray().put(new JSONObject()
             .put("quantity", 1)
             .put("foodId", foodId)
         ));
 
+        // Sending POST request to Edamam API
         Response edamamResponse = client.accept(MediaType.APPLICATION_JSON)
                                         .post(requestBody.toString());
         
+        // Reading and parsing the response
         String responseString = edamamResponse.readEntity(String.class);
         JSONObject jsonObject = new JSONObject(responseString);
         
+        // Creating FoodData object from the response
         FoodData toReturn = new FoodData();
         JSONObject parsedFood = jsonObject.getJSONArray("ingredients").getJSONObject(0);
         
+        // Setting various properties of FoodData from the parsed JSON response
         toReturn.setFoodId(parsedFood.getString("foodId"));
         toReturn.setLabel(parsedFood.getString("label"));
         toReturn.setKnownAs(parsedFood.optString("knownAs", ""));
@@ -75,13 +84,15 @@ public class EdamamRestClient {
             toReturn.setNutrients(nutrients);
         }
         
+        // Logging the returned object
         Utility.consoleLog("Returned Object from id " + foodId +  " ==> " + toReturn.toString());
         
         return toReturn;
     }
     
+    // Simulated method for testing purposes to return dummy food data
     public static FoodData getFoodDataSimulated(String foodId) {
-        // Simulated data for testing purposes
+        // Simulated JSON response
         String testJSON = "{ \"ingredients\": [ { \"parsed\": { \"foodId\": \"food_a1b2c3d4\", \"label\": \"Apple\", \"category\": \"Generic foods\", \"categoryLabel\": \"fruit\", \"brand\": \"\", \"foodContentsLabel\": \"\", \"image\": \"\" } } ] }";
         
         JSONObject jsonObject = new JSONObject(testJSON);

@@ -27,7 +27,7 @@ public class RatingDataDAO_SQLLite implements RatingDataDAO {
 		try {
 			Class.forName("org.sqlite.JDBC");
 		} catch (ClassNotFoundException e1) {
-			// TODO Auto-generated catch block
+			
 			e1.printStackTrace();
 		}
         String url = "jdbc:sqlite:" + FileURL;
@@ -75,7 +75,7 @@ public class RatingDataDAO_SQLLite implements RatingDataDAO {
 		try {
 			createDB();
 		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
+			
 			e1.printStackTrace();
 		}
 		
@@ -111,7 +111,7 @@ public class RatingDataDAO_SQLLite implements RatingDataDAO {
 		try {
 			createDB();
 		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
+			
 			e1.printStackTrace();
 		}
 		
@@ -164,7 +164,7 @@ public class RatingDataDAO_SQLLite implements RatingDataDAO {
 			}
 			
 		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
+			
 			e1.printStackTrace();
 		}
 		

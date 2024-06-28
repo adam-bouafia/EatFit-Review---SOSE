@@ -20,7 +20,7 @@ public class Utils {
 			resourcesPath = new File(resource.toURI()).getAbsolutePath();
 			return resourcesPath; 
 		} catch (URISyntaxException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 			return "";
 		}

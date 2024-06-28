@@ -29,7 +29,7 @@ public class RatingUpdaterImpl implements RatingUpdater {
 			}
 			return new RatingOperationResponse("User has already inserted the ratings for the food", false).getJSONResponse();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 			return new RatingOperationResponse("Exception during add ratings", false).getJSONResponse();
 		}
@@ -44,7 +44,7 @@ public class RatingUpdaterImpl implements RatingUpdater {
 		try {
 			return new JSONObject(RatingUpdaterService.getInstance().getRatingAverages(foodId)).toString();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 			return new JSONObject(new RatingOperationResponse("Exeption retrieving averages", false)).toString();
 		}
@@ -55,7 +55,7 @@ public class RatingUpdaterImpl implements RatingUpdater {
 		try {
 			return new JSONArray(RatingUpdaterService.getInstance().getAllRatings(foodId)).toString();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 			return new JSONObject(new RatingOperationResponse("Exeption retrieving all ratings", false)).toString();
 		}
@@ -68,7 +68,7 @@ public class RatingUpdaterImpl implements RatingUpdater {
 		try {
 			return new JSONObject(RatingUpdaterService.getInstance().getGlobalScore(foodId)).toString();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 			return new JSONObject(new RatingOperationResponse("Exeption retrieving global score", false)).toString();
 		}
@@ -100,7 +100,7 @@ public class RatingUpdaterImpl implements RatingUpdater {
 					UtilityMethods.consoleLog("Responding on background thread NOT INSERTED");
 					asyncResponse.resume(response);
 				} catch (Exception e) {
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 					String message = new RatingOperationResponse("Exception during add ratings", false).getJSONResponse();
 					Response response = Response.ok(message).type(MediaType.APPLICATION_JSON).build();

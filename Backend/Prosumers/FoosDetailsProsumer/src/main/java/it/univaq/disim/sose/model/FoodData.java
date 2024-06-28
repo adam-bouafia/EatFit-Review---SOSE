@@ -5,28 +5,30 @@ import java.util.List;
 public class FoodData {
 
     // Edamam Data
-    private String foodId;
-    private String label;
-    private String knownAs;
-    private String category;
-    private String categoryLabel;
-    private String brand;
-    private String foodContentsLabel;
-    private String image;
-    private List<ServingSize> servingSizes;
-    private Integer servingsPerContainer;
-    private Nutrients nutrients;
+    private String foodId;                // Unique identifier for the food item
+    private String label;                 // Name of the food item
+    private String knownAs;               // Alternate names for the food item
+    private String category;              // Category of the food item
+    private String categoryLabel;         // Label for the category
+    private String brand;                 // Brand name, if any
+    private String foodContentsLabel;     // Label describing the food contents
+    private String image;                 // URL to the image of the food item
+    private List<ServingSize> servingSizes; // List of serving sizes
+    private Integer servingsPerContainer; // Number of servings per container
+    private Nutrients nutrients;          // Nutritional information
 
     // Reviews
-    private List<Review> reviews;
+    private List<Review> reviews;         // List of reviews for the food item
 
     // Rankings
-    private AggregatedRatingData ratings;
+    private AggregatedRatingData ratings; // Aggregated ratings data
 
+    // Default constructor
     public FoodData() {
         super();
     }
 
+    // Getter and Setter methods
     public String getFoodId() {
         return foodId;
     }
@@ -131,6 +133,7 @@ public class FoodData {
         this.ratings = ratings;
     }
 
+    // Override the toString method for easy printing
     @Override
     public String toString() {
         return "FoodData [foodId=" + foodId + ", label=" + label + ", knownAs=" + knownAs + ", category=" + category
@@ -141,10 +144,11 @@ public class FoodData {
 
     // Nested ServingSize class
     public static class ServingSize {
-        private String uri;
-        private String label;
-        private Double quantity;
+        private String uri;       // URI of the serving size
+        private String label;     // Label of the serving size
+        private Double quantity;  // Quantity of the serving size
 
+        // Getter and Setter methods
         public String getUri() {
             return uri;
         }
@@ -169,6 +173,7 @@ public class FoodData {
             this.quantity = quantity;
         }
 
+        // Override the toString method for easy printing
         @Override
         public String toString() {
             return "ServingSize [uri=" + uri + ", label=" + label + ", quantity=" + quantity + "]";
@@ -178,11 +183,12 @@ public class FoodData {
     // Nested Nutrients class
     public static class Nutrients {
         private Double ENERC_KCAL; // Energy in kcal
-        private Double PROCNT; // Protein in g
-        private Double FAT; // Total lipid (fat) in g
-        private Double CHOCDF; // Carbohydrate, by difference in g
-        private Double FIBTG; // Fiber, total dietary in g
+        private Double PROCNT;     // Protein in g
+        private Double FAT;        // Total lipid (fat) in g
+        private Double CHOCDF;     // Carbohydrate, by difference in g
+        private Double FIBTG;      // Fiber, total dietary in g
 
+        // Getter and Setter methods
         public Double getENERC_KCAL() {
             return ENERC_KCAL;
         }
@@ -223,6 +229,7 @@ public class FoodData {
             this.FIBTG = FIBTG;
         }
 
+        // Override the toString method for easy printing
         @Override
         public String toString() {
             return "Nutrients [ENERC_KCAL=" + ENERC_KCAL + ", PROCNT=" + PROCNT + ", FAT=" + FAT + ", CHOCDF=" + CHOCDF

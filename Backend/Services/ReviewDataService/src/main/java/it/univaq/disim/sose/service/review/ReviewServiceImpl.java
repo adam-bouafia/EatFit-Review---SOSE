@@ -62,7 +62,7 @@ public class ReviewServiceImpl implements ReviewService{
 			 response = reviewDAO.inserReview(new Review(foodID,userID, title, text));
 		} catch (SQLException e) {
 
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		
 		}
@@ -94,7 +94,7 @@ public class ReviewServiceImpl implements ReviewService{
 					 DAOResponse = reviewDAO.inserReview(new Review(foodID,userID, title, text));
 				} catch (SQLException e) {
 
-					// TODO Auto-generated catch block
+					
 					e.printStackTrace();
 				
 				}
