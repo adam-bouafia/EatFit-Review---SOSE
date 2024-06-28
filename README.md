@@ -34,13 +34,13 @@ private static final String APIKey = "ENTER YOUR API";
 
 #### 5. Open Eclipse IDE, create a new Tomcat instance and run all the services:
 
-  AuthService
-  FoodDetailsProsumer
-  FoodDetailsAggregator
-  FoodSearchProsumer
-  RatingUpdaterRESTService
-  ReviewDataService
-  ReviewEditorProsumer
+  **AuthService**
+  **FoodDetailsProsumer**
+  **FoodDetailsAggregator**
+  **FoodSearchProsumer**
+  **RatingUpdaterRESTService**
+  **ReviewDataService**
+  **ReviewEditorProsumer**
 
   
 #### 6. Install Android application
@@ -50,6 +50,15 @@ To use Nginx load balancer, you have to follow several steps we summarized in th
 
 #### Usage
 Opening the Android application, you can search for food items. Clicking on a result, you will be redirected to the details page where you'll see all the food metadata, the averages of the ratings, the summary global score, and the reviews of that food item. You can also sign up and sign in to rate and write a review for a food item.
+
+### Detailed Usage
+
+After installing the app, you can start exploring the wide variety of foods by using the search functionality. Here are some steps to get you started:
+- **Step 1:** Open the app and navigate to the search bar.
+  
+- **Step 2:** Enter the name of the food item you're interested in.
+  
+- **Step 3:** Browse through the search results and click on any item to view detailed nutritional information and reviews.
 
 
 #### Project Structure
@@ -518,14 +527,6 @@ EatFit & Review SOSE Project/
 ├── .gitignore
 └── LICENSE
 ```
-### Detailed Usage
-
-After installing the app, you can start exploring the wide variety of foods by using the search functionality. Here are some steps to get you started:
-- **Step 1:** Open the app and navigate to the search bar.
-  
-- **Step 2:** Enter the name of the food item you're interested in.
-  
-- **Step 3:** Browse through the search results and click on any item to view detailed nutritional information and reviews.
 
 ### How to Contribute
 
