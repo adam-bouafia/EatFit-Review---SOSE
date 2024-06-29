@@ -42,7 +42,7 @@ public class RatingData {
 
     // Default constructor
     public RatingData() {
-        // TODO Auto-generated constructor stub
+        
     }
 
     // Getter and Setter methods
