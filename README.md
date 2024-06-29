@@ -25,13 +25,13 @@ To install the application follow these steps:
    ```
    
 #### 3. Enter your API in FoodSearchProsumer/src/main/java/it/univaq/disim/sose/search/SearchImpl.java
-   ```sh
+   ```java
 private static final String APP_ID = "ENTER YOUR APP ID";
 private static final String API_KEY = "ENTER YOUR APP KEY";
 ```
 #### 4. And in FoodDetailsProsumer/src/main/java/it/univaq/disim/sose/fooddetails/data/EdamamRestClient.java
    
-   ```sh
+   ```java
 private static final String APP_ID = "ENTER YOUR APP ID";
 private static final String API_KEY = "ENTER YOUR APP KEY";
 ```

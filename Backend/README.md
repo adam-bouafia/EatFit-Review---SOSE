@@ -28,14 +28,15 @@ To install the application follow these steps:
 3. Enter your API in `FoodSearchProsumer/src/main/java/it/univaq/disim/sose/search/SearchImpl.java`
    
    ```java
-   private String API_KEY = "ENTER YOUR API";
-   ```
-
+      private static final String APP_ID = "ENTER YOUR APP ID";
+      private static final String API_KEY = "ENTER YOUR APP KEY";
+      ```
    and in `FoodDetailsProsumer/src/main/java/it/univaq/disim/sose/fooddetails/data/EdamamRestClient.java`
 
    ```java
-   private static final String APIKey = "ENTER YOUR API";
-   ```
+      private static final String APP_ID = "ENTER YOUR APP ID";
+      private static final String API_KEY = "ENTER YOUR APP KEY";
+      ```
 4. Open Eclipse IDE, create a new Tomcat instance and run all the services:
    1. AuthService
    2. FoodDetailsProsumer
