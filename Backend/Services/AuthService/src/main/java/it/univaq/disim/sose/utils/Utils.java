@@ -6,8 +6,6 @@ import java.net.URL; // Importing necessary classes for handling URLs
 import java.text.SimpleDateFormat; // Importing necessary classes for date formatting
 import java.util.Date; // Importing necessary classes for handling dates
 
-import it.univaq.disim.sose.service.DAO.SQLiteDAOFactory; // Importing the SQLiteDAOFactory class
-
 public class Utils {
 
     // Method to get the path of the resources folder

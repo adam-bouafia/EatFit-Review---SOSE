@@ -7,66 +7,69 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "Review")
 public class Review {
-	
-	
-	private String  foodID;
-	private int userID; 
-	private String title;
-	private String comment;
 
-		
-	public Review(String foodID, int userID,String title, String comment) {
-		super();
-		this.foodID = foodID;
-		this.userID = userID;
-		this.title = title;	
-		this.comment = comment;
-	}
-	
-	public Review(ResultSet resultSet) throws SQLException {
-		this.foodID = resultSet.getString(1);
-		this.userID = resultSet.getInt(2);
-		this.title = resultSet.getString(3);
-		this.comment = resultSet.getString(4);
-	}
+    // Attributes
+    private String foodID;
+    private int userID; 
+    private String title;
+    private String comment;
 
-	public String getFoodID() {
-		return foodID;
-	}
+    // Constructor with parameters
+    public Review(String foodID, int userID, String title, String comment) {
+        super();
+        this.foodID = foodID;
+        this.userID = userID;
+        this.title = title;
+        this.comment = comment;
+    }
 
-	public void setFoodID(String foodID) {
-		this.foodID = foodID;
-	}
+    // Constructor to create a Review object from a ResultSet
+    public Review(ResultSet resultSet) throws SQLException {
+        this.foodID = resultSet.getString(1);
+        this.userID = resultSet.getInt(2);
+        this.title = resultSet.getString(3);
+        this.comment = resultSet.getString(4);
+    }
 
-	public int getUserID() {
-		return userID;
-	}
+    // Getter and setter for foodID
+    public String getFoodID() {
+        return foodID;
+    }
 
-	public void setUserID(int userID) {
-		this.userID = userID;
-	}
+    public void setFoodID(String foodID) {
+        this.foodID = foodID;
+    }
 
-	public String getComment() {
-		return comment;
-	}
+    // Getter and setter for userID
+    public int getUserID() {
+        return userID;
+    }
 
-	public void setComment(String comment) {
-		this.comment = comment;
-	}
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
 
-	public String getTitle() {
-		return title;
-	}
+    // Getter and setter for comment
+    public String getComment() {
+        return comment;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	
-	@Override
-	public String toString() {
-		return "Review [foodID=" + foodID + ", userID=" + userID + ", title=" + title + ", comment=" + comment + "]";
-	}
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 
-	
-	
+    // Getter and setter for title
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    
+    // Override toString method to provide a string representation of the Review object
+    @Override
+    public String toString() {
+        return "Review [foodID=" + foodID + ", userID=" + userID + ", title=" + title + ", comment=" + comment + "]";
+    }
 }
