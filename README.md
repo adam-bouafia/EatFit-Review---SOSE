@@ -1,7 +1,8 @@
 # EatFit & Review SOSE Project
 
 ## About the project
-This repo is for the *Service Oriented Software Engineering* course project at the University of L'Aquila.
+This repository contains the Service Oriented Software Engineering course project "EatFit&Review" at the University of L'Aquila. 
+The project focuses on building a service-oriented system for searching, reviewing, and rating food items using Edamam Food Database API.
 
 ## Getting Started
 This application consists of a set of services and microservices that have to be started inside a server to run the whole system.
@@ -24,12 +25,13 @@ To install the application follow these steps:
    ```
    
 #### 3. Enter your API in FoodSearchProsumer/src/main/java/it/univaq/disim/sose/search/SearchImpl.java
-
-private String API_KEY = "ENTER YOUR API";
+private static final String APP_ID = "ENTER YOUR APP ID";
+private static final String API_KEY = "ENTER YOUR APP KEY";
 
 #### 4. And in FoodDetailsProsumer/src/main/java/it/univaq/disim/sose/fooddetails/data/EdamamRestClient.java
 
-private static final String APIKey = "ENTER YOUR API";
+private static final String APP_ID = "ENTER YOUR APP ID";
+private static final String API_KEY = "ENTER YOUR APP KEY";
 
 
 #### 5. Open Eclipse IDE, create a new Tomcat instance and run all the services:
@@ -262,7 +264,7 @@ EatFit & Review SOSE Project/
 │ │ │ ├── .project
 │ │ │ ├── FoodSearchProsumer.iml
 │ │ │ ├── pom.xml
-│ │ ├── FoosDetailsProsumer
+│ │ ├── FoodDetailsProsumer
 │ │ │ ├── .settings
 │ │ │ │ ├── .jsdtscope
 │ │ │ │ ├── org.eclipse.core.resources.prefs
