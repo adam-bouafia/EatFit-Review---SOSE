@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "0e0de4e0-8fe6-497c-8e51-39b59bf3b7a2",
+		"name": "Soap Search (FoodSearchProsumer)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18536825"
+	},
+	"item": [
+		{
+			"name": "FoodSearchProsumer SOAP",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SOAPAction",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ser=\"http://search.sose.disim.univaq.it/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <ser:searchFood>\r\n         <arg0>coffee</arg0>\r\n      </ser:searchFood>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/FoodSearchProsumer/search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"FoodSearchProsumer",
+						"search"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8081/FoodSearchProsumer/search",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "SOAPAction",
+								"value": "",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "text/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ser=\"http://search.sose.disim.univaq.it/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <ser:searchFood>\r\n         <arg0>coffee</arg0>\r\n      </ser:searchFood>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>\r\n",
+							"options": {
+								"raw": {
+									"language": "xml"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/FoodSearchProsumer/search",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"FoodSearchProsumer",
+								"search"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.26.1"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 30 Jun 2024 15:35:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/xml",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5295"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n    <soap:Body>\n        <ns2:searchFoodResponse xmlns:ns2=\"http://search.sose.disim.univaq.it/\">\n            <return>\n                <brand></brand>\n                <category>Generic foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_ax0a0yxbbe4hx0apiz1tla01s2w7</id>\n                <image>https://www.edamam.com/food-img/ee9/ee9566349cb84dfd9ddac1fdf8cbc907.jpg</image>\n                <label>Coffee</label>\n            </return>\n            <return>\n                <brand></brand>\n                <category>Generic foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_ax0a0yxbbe4hx0apiz1tla01s2w7</id>\n                <image>https://www.edamam.com/food-img/ee9/ee9566349cb84dfd9ddac1fdf8cbc907.jpg</image>\n                <label>Coffee Bean</label>\n            </return>\n            <return>\n                <brand></brand>\n                <category>Generic foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_ax0a0yxbbe4hx0apiz1tla01s2w7</id>\n                <image>https://www.edamam.com/food-img/ee9/ee9566349cb84dfd9ddac1fdf8cbc907.jpg</image>\n                <label>Chicory Coffee</label>\n            </return>\n            <return>\n                <brand></brand>\n                <category>Generic foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_b36idu0apr5kqtbcs7b7ua8spx6m</id>\n                <image>https://www.edamam.com/food-img/336/336e810373dd353a955a6896699b586e.jpg</image>\n                <label>Coffee Bean</label>\n            </return>\n            <return>\n                <brand></brand>\n                <category>Generic foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_b47ji9gbrvztlfaegs48manqq9wb</id>\n                <image>https://www.edamam.com/food-img/14e/14ef691560563277aade0f8c56ed2e44.jpg</image>\n                <label>Decaffeinated Coffee</label>\n            </return>\n            <return>\n                <brand></brand>\n                <category>Generic meals</category>\n                <categoryLabel>meal</categoryLabel>\n                <id>food_bzw5g5wa3rrmcqafd803naemmzdw</id>\n                <image></image>\n                <label>Coffee</label>\n            </return>\n            <return>\n                <brand></brand>\n                <category>Generic meals</category>\n                <categoryLabel>meal</categoryLabel>\n                <id>food_a5n4k33advpsfdaesg5n5bun2rgs</id>\n                <image></image>\n                <label>Coffee Glazed Coffee Cake</label>\n            </return>\n            <return>\n                <brand>Fuel for Fire</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_b80coyra3lcl2db2noe1sardvcxz</id>\n                <image></image>\n                <label>Coffee Smoothie, Coffee</label>\n            </return>\n            <return>\n                <brand></brand>\n                <category>Generic meals</category>\n                <categoryLabel>meal</categoryLabel>\n                <id>food_bo5i12yatvjhdlbk9g3aca8zaufh</id>\n                <image></image>\n                <label>Coffee Lover's Coffee Cake</label>\n            </return>\n            <return>\n                <brand>VIVA ENERGY BAR</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_btafki4ae6a72wbohrshxb1ay78c</id>\n                <image></image>\n                <label>Coffee Bar, Coffee</label>\n            </return>\n            <return>\n                <brand>Kingston Marketing Co</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_a0vivkjbhkhohka2rttb3ajb1o9n</id>\n                <image></image>\n                <label>Coffee Double Energy Coffee Drink, Coffee</label>\n            </return>\n            <return>\n                <brand>High Brew Coffee, Inc.</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_asv6dijafqxxr7apn3w6gbr3hzzm</id>\n                <image>https://www.edamam.com/food-img/6b4/6b490fbc9da0db89fe395be0a163a170.jpg</image>\n                <label>Coffee</label>\n            </return>\n            <return>\n                <brand>Modern Times, LLC</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_bw2u260b83j54ibha06bobehukki</id>\n                <image></image>\n                <label>Coffee</label>\n            </return>\n            <return>\n                <brand>Stumptown Coffee Roasters Inc.</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_ajyx14ubsgj2sya7o6l6ja4b40d3</id>\n                <image>https://www.edamam.com/food-img/89d/89d2b19b360d1418e5a22afea014ef7a.png</image>\n                <label>Coffee</label>\n            </return>\n            <return>\n                <brand>Abe's</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_avkemb4bu2mbnrbar5h66bfoir2j</id>\n                <image></image>\n                <label>Coffee Cake, Coffee</label>\n            </return>\n            <return>\n                <brand>The Kroger Co.</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_auoqtu3bk8ipmqaa0rcykae23xkw</id>\n                <image></image>\n                <label>Coffee</label>\n            </return>\n            <return>\n                <brand>Black</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_b73bvy8bywyuo6bjmlrtwa54oaf8</id>\n                <image></image>\n                <label>Black Coffee Cold Brew Coffee, Black Coffee</label>\n            </return>\n            <return>\n                <brand>DAVID'S FAMOUS GOURMET FROZEN CUSTARD</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_b6k4x8nbkl96pgbrmmv8raqgmf0f</id>\n                <image></image>\n                <label>Coffee</label>\n            </return>\n            <return>\n                <brand>Harris-Teeter Inc.</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_am75nk7bdv8zubafkidbsaq2hkgr</id>\n                <image></image>\n                <label>Coffee Ice Cream, Coffee</label>\n            </return>\n            <return>\n                <brand>VAN LEEUWEN</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_adpzpjhaby9qx7bp5snorb3wpuc0</id>\n                <image></image>\n                <label>Coffee</label>\n            </return>\n            <return>\n                <brand>ORGANIC</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_b0fdjfob4mg3hna0ob1uvab9mik3</id>\n                <image>https://www.edamam.com/food-img/574/574e5f35dd774202484978c610091e21.jpg</image>\n                <label>Coffee Organic Soymilk, Coffee</label>\n            </return>\n            <return>\n                <brand>The Haagen-Dazs Company, Inc.</brand>\n                <category>Packaged foods</category>\n                <categoryLabel>food</categoryLabel>\n                <id>food_ajknlombt3omkba75jxr6b5iih8l</id>\n                <image>https://www.edamam.com/food-img/c20/c2020ed3ec68dc93e9f59006e73f57cc.jpg</image>\n                <label>Coffee Ice Cream, Coffee</label>\n            </return>\n        </ns2:searchFoodResponse>\n    </soap:Body>\n</soap:Envelope>"
+				}
+			]
+		}
+	]
+}

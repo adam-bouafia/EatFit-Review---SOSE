@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "f2e556f2-4722-4010-ac69-5fe31deee66b",
+		"name": "Rest Rating Updater",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18536825"
+	},
+	"item": [
+		{
+			"name": "Add Rating GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ratingUpdaterService/rest/ratingupdaterservice/addRatings?userId=1&foodId=food_a8hs60uayl5icia1qe8qoba1kwp8&tasteRating=4&nutritionalvalueRating=5&overallsatisfactionRating=4&packagingRating=3&costumesRating=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ratingUpdaterService",
+						"rest",
+						"ratingupdaterservice",
+						"addRatings"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "foodId",
+							"value": "food_a8hs60uayl5icia1qe8qoba1kwp8"
+						},
+						{
+							"key": "tasteRating",
+							"value": "4"
+						},
+						{
+							"key": "nutritionalvalueRating",
+							"value": "5"
+						},
+						{
+							"key": "overallsatisfactionRating",
+							"value": "4"
+						},
+						{
+							"key": "packagingRating",
+							"value": "3"
+						},
+						{
+							"key": "costumesRating",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Rating Async GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ratingUpdaterService/rest/ratingupdaterservice/addRatingsAsync?userId=2&foodId=food_a8hs60uayl5icia1qe8qoba1kwp7&tasteRating=4&nutritionalvalueRating=5&overallsatisfactionRating=4&packagingRating=3&costumesRating=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ratingUpdaterService",
+						"rest",
+						"ratingupdaterservice",
+						"addRatingsAsync"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "2"
+						},
+						{
+							"key": "foodId",
+							"value": "food_a8hs60uayl5icia1qe8qoba1kwp7"
+						},
+						{
+							"key": "tasteRating",
+							"value": "4"
+						},
+						{
+							"key": "nutritionalvalueRating",
+							"value": "5"
+						},
+						{
+							"key": "overallsatisfactionRating",
+							"value": "4"
+						},
+						{
+							"key": "packagingRating",
+							"value": "3"
+						},
+						{
+							"key": "costumesRating",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET getallrating",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ratingUpdaterService/rest/ratingupdaterservice/getAllRatings?foodId=food_a8hs60uayl5icia1qe8qoba1kwp8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ratingUpdaterService",
+						"rest",
+						"ratingupdaterservice",
+						"getAllRatings"
+					],
+					"query": [
+						{
+							"key": "foodId",
+							"value": "food_a8hs60uayl5icia1qe8qoba1kwp8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getGlobal Scoring",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ratingUpdaterService/rest/ratingupdaterservice/getGlobalScore?foodId=food_a8hs60uayl5icia1qe8qoba1kwp8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ratingUpdaterService",
+						"rest",
+						"ratingupdaterservice",
+						"getGlobalScore"
+					],
+					"query": [
+						{
+							"key": "foodId",
+							"value": "food_a8hs60uayl5icia1qe8qoba1kwp8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRatingAvgs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ratingUpdaterService/rest/ratingupdaterservice/getRatingAvgs?foodId=food_a8hs60uayl5icia1qe8qoba1kwp8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ratingUpdaterService",
+						"rest",
+						"ratingupdaterservice",
+						"getRatingAvgs"
+					],
+					"query": [
+						{
+							"key": "foodId",
+							"value": "food_a8hs60uayl5icia1qe8qoba1kwp8"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

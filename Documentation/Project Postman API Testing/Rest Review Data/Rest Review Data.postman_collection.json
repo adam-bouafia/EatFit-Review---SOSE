@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "f1a933ca-6e3f-498f-92c9-2c8e22cc6a14",
+		"name": "Rest Review Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18536825"
+	},
+	"item": [
+		{
+			"name": "InsertReview",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ReviewDataService/rest/Review/insertReview?foodID=food_a8hs60uayl5icia1qe8qoba1kwp8&title=Amazing&text=Best pasta I've had.&userID=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ReviewDataService",
+						"rest",
+						"Review",
+						"insertReview"
+					],
+					"query": [
+						{
+							"key": "foodID",
+							"value": "food_a8hs60uayl5icia1qe8qoba1kwp8"
+						},
+						{
+							"key": "title",
+							"value": "Amazing"
+						},
+						{
+							"key": "text",
+							"value": "Best pasta I've had."
+						},
+						{
+							"key": "userID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rest Review ByUserID and ByFoodID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ReviewDataService/rest/Review/getReviewByFoodIDUserID?foodID=food_a8hs60uayl5icia1qe8qoba1kwp8&userID=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ReviewDataService",
+						"rest",
+						"Review",
+						"getReviewByFoodIDUserID"
+					],
+					"query": [
+						{
+							"key": "foodID",
+							"value": "food_a8hs60uayl5icia1qe8qoba1kwp8"
+						},
+						{
+							"key": "userID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rest Review By FoodID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ReviewDataService/rest/Review/getReviewsByFoodID?foodID=food_a8hs60uayl5icia1qe8qoba1kwp8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ReviewDataService",
+						"rest",
+						"Review",
+						"getReviewsByFoodID"
+					],
+					"query": [
+						{
+							"key": "foodID",
+							"value": "food_a8hs60uayl5icia1qe8qoba1kwp8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Review By UserID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ReviewDataService/rest/Review/getReviewsByUserID?userID=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ReviewDataService",
+						"rest",
+						"Review",
+						"getReviewsByUserID"
+					],
+					"query": [
+						{
+							"key": "userID",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

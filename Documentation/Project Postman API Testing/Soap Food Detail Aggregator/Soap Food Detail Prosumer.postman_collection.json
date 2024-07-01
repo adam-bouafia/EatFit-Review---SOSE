@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "22233c24-c79e-4916-9beb-d237ad9580de",
+		"name": "Soap Food Detail Prosumer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18536825"
+	},
+	"item": [
+		{
+			"name": "SOAP fooddetailsaggregator",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					},
+					{
+						"key": "SOAPAction",
+						"value": "\"\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ser=\"http://service.sose.disim.univaq.it/\">\r\n   <soapenv:Header/>\r\n   <soapenv:Body>\r\n      <ser:aggregateRatings>\r\n         <arg0>food_a8hs60uayl5icia1qe8qoba1kwp8</arg0>\r\n      </ser:aggregateRatings>\r\n   </soapenv:Body>\r\n</soapenv:Envelope>\r\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/FoodDetailsAggregator/fooddetailsaggregator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"FoodDetailsAggregator",
+						"fooddetailsaggregator"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

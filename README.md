@@ -50,7 +50,7 @@ private static final String API_KEY = "ENTER YOUR APP KEY";
 #### 6. Install Android application
 
 #### Nginx Load Balancer
-To use Nginx load balancer, you have to follow several steps we summarized in the NGINX Load Balancer SOSE.pdf file.
+To use Nginx load balancer, you have to follow several steps we summarized in the NGINX Load Balancer SOSE.pdf file as the Conf file is already in the repository at the Nginx server Conf .
 
 #### Usage
 Opening the Android application, you can search for food items. Clicking on a result, you will be redirected to the details page where you'll see all the food metadata, the averages of the ratings, the summary global score, and the reviews of that food item. You can also sign up and sign in to rate and write a review for a food item.
@@ -63,6 +63,307 @@ After installing the app, you can start exploring the wide variety of foods by u
 - **Step 2:** Enter the name of the food item you're interested in.
   
 - **Step 3:** Browse through the search results and click on any item to view detailed nutritional information and reviews.
+
+# EatFit&Review API Testing Using Postman Documentation
+
+This documentation contains all the test results, including screenshots and Postman collections, for the various SOAP and REST services in the project.
+
+## SOAP Services
+
+### Food Detail Aggregator
+
+#### 1. Aggregate Ratings
+
+
+```xml
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://service.sose.disim.univaq.it/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:aggregateRatings>
+         <arg0>food_a8hs60uayl5icia1qe8qoba1kwp8</arg0>
+      </web:aggregateRatings>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+```
+
+![Aggregate Ratings](.Presentation/Project%20Postman%20API%20Testing/Soap%20Food%20Detail%20Aggregator/fooddetailsaggregator.png)
+
+
+### Food Search Prosumer
+
+#### 1. Search Food
+
+
+```xml
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.sose.disim.univaq.it/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:searchFood>
+         <arg0>pasta</arg0>
+      </ser:searchFood>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+```
+
+![Aggregate Ratings](.Presentation/Project%20Postman%20API%20Testing/Soap%20Food%20Search%20Prosumer/FoodSearchProsumer.png)
+
+
+## REST Services
+
+### Authentification
+
+#### 1. Login with User Does Not Exist
+
+```json
+{
+  "method": "POST",
+  "url": "http://localhost:8081/AuthService/rest/User/Login",
+  "headers": {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json"
+  },
+  "body": {
+    "username": "test3",
+    "password": "test3"
+  }
+}
+```
+
+![login with user does not exist](.Presentation/Project%20Postman%20API%20Testing/Rest%20Authentification/login%20with%20user%20does%20not%20exist.png)
+
+#### 2. Login with User Exists
+
+```json
+{
+  "method": "POST",
+  "url": "http://localhost:8081/AuthService/rest/User/Login",
+  "headers": {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json"
+  },
+  "body": {
+    "username": "test3",
+    "password": "test3"
+  }
+}
+```
+
+![login with user exist](.Presentation/Project%20Postman%20API%20Testing/Rest%20Authentification/login%20with%20user%20exist.png)
+
+#### 3. Check User
+
+```json
+{
+  "method": "POST",
+  "url": "http://localhost:8081/AuthService/rest/User/checkUser",
+  "headers": {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json"
+  },
+  "body": {
+    "userID": "test3",
+    "userToken": "test3"
+  }
+}
+
+```
+
+![Check user exist](.Presentation/Project%20Postman%20API%20Testing/Rest%20Authentification/Check%20user.png)
+
+#### 4. Sign Up
+
+```json
+{
+  "method": "POST",
+  "url": "http://localhost:8081/AuthService/rest/User/signup",
+  "headers": {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json"
+  },
+  "body": {
+    "username": "newuserr",
+    "password": "newpasswordd"
+  }
+}
+
+```
+
+![Sign Up](.Presentation/Project%20Postman%20API%20Testing/Rest%20Authentification/Sign%20up.png)
+
+
+### Rating Updater
+
+#### 1. Add Rating
+
+```json
+{
+  "method": "GET",
+  "url": "http://localhost:8080/ratingUpdaterService/rest/ratingupdaterservice/addRatings",
+  "params": {
+    "userId": "1",
+    "foodId": "food_a8hs60uayl5icia1qe8qoba1kwp8",
+    "tasteRating": "4",
+    "nutritionalvalueRating": "5",
+    "overallsatisfactionRating": "4",
+    "packagingRating": "3",
+    "costumesRating": "4"
+  }
+}
+
+```
+
+![Add Rating](.Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20addRating.png)
+
+
+#### 2. Add Rating Async
+
+```json
+{
+  "method": "GET",
+  "url": "http://localhost:8080/ratingUpdaterService/rest/ratingupdaterservice/addRatingsAsync",
+  "params": {
+    "userId": "2",
+    "foodId": "food_a8hs60uayl5icia1qe8qoba1kwp7",
+    "tasteRating": "4",
+    "nutritionalvalueRating": "5",
+    "overallsatisfactionRating": "4",
+    "packagingRating": "3",
+    "costumesRating": "4"
+  }
+}
+
+
+```
+
+![Add Rating Async](.Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20addRating.png)
+
+#### 3. Get All Rating
+
+```json
+{
+  "method": "GET",
+  "url": "http://localhost:8080/ratingUpdaterService/rest/ratingupdaterservice/getAllRatings",
+  "params": {
+    "foodId": "food_a8hs60uayl5icia1qe8qoba1kwp8"
+  }
+}
+
+
+```
+
+![Get All Rating](.Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20GetAllRating.png)
+
+#### 4. Get Global Score
+
+```json
+{
+  "method": "GET",
+  "url": "http://localhost:8080/ratingUpdaterService/rest/ratingupdaterservice/getGlobalScore",
+  "params": {
+    "foodId": "food_a8hs60uayl5icia1qe8qoba1kwp8"
+  }
+}
+
+
+```
+
+![Get Global Score](.Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20GetGlobalScore.png)
+
+#### 5. Get Rating Averages
+
+```json
+{
+  "method": "GET",
+  "url": "http://localhost:8080/ratingUpdaterService/rest/ratingupdaterservice/getRatingAvgs",
+  "params": {
+    "foodId": "food_a8hs60uayl5icia1qe8qoba1kwp8"
+  }
+}
+
+```
+
+![Get Global Score](.Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20GetRatingAverages.png)
+
+### Review Data
+
+#### 1. Get Reviews by Food ID
+
+
+```json
+{
+  "method": "GET",
+  "url": "http://localhost:8080/ReviewDataService/rest/Review/getReviewsByFoodID",
+  "params": {
+    "foodID": "food_a8hs60uayl5icia1qe8qoba1kwp8"
+  }
+}
+
+
+```
+
+![Get Reviews by Food ID](.Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/GetReviewsByfoodID.png)
+
+#### 2. Get Reviews by User ID
+
+
+```json
+{
+  "method": "GET",
+  "url": "http://localhost:8080/ReviewDataService/rest/Review/getReviewsByUserID",
+  "params": {
+    "userID": "1"
+  }
+}
+
+
+```
+
+![Get Reviews by User ID](.Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/GetReviewsByUserID.png)
+
+#### 3. Get Reviews by User ID and Food ID
+
+
+```json
+{
+  "method": "GET",
+  "url": "http://localhost:8080/ReviewDataService/rest/Review/getReviewByFoodIDUserID",
+  "params": {
+    "foodID": "food_a8hs60uayl5icia1qe8qoba1kwp8",
+    "userID": "1"
+  }
+}
+
+
+
+```
+
+![Get Reviews by User ID](.Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/GetReviewsByfoodIDandByUserID.png)
+
+#### 4. Insert Review
+
+
+```json
+{
+  "method": "GET",
+  "url": "http://localhost:8080/ReviewDataService/rest/Review/insertReview",
+  "params": {
+    "foodID": "food_a8hs60uayl5icia1qe8qoba1kwp8",
+    "title": "Great Food!",
+    "text": "This food was really good and tasty.",
+    "userID": "1"
+  }
+}
+
+
+
+```
+
+![Get Reviews by User ID](.Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/insert%20Review.png)
 
 
 #### Project Structure

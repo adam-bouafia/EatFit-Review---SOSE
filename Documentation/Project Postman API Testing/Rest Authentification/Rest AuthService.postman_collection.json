@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "796f8e18-e0b0-4680-9efb-e01c0edd85c2",
+		"name": "Rest AuthService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18536825"
+	},
+	"item": [
+		{
+			"name": "AuthService:Login Rest : Post",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "test3",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/AuthService/rest/User/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"AuthService",
+						"rest",
+						"User",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OpenAPI Json",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthService/rest/api-docs?url=/AuthService/rest/openapi.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthService",
+						"rest",
+						"api-docs"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "/AuthService/rest/openapi.json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckUSER",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true,
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "userID",
+							"value": "test3",
+							"type": "text"
+						},
+						{
+							"key": "userToken",
+							"value": "test3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/AuthService/rest/User/checkUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"AuthService",
+						"rest",
+						"User",
+						"checkUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AuthService:Signup Rest : Post",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "newuserr",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "newpasswordd",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8081/AuthService/rest/User/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"AuthService",
+						"rest",
+						"User",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
