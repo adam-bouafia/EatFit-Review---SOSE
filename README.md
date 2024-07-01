@@ -39,11 +39,17 @@ private static final String API_KEY = "ENTER YOUR APP KEY";
 #### 5. Open Eclipse IDE, create a new Tomcat instance and run all the services:
 
   **AuthService**
+  
   **FoodDetailsProsumer**
+  
   **FoodDetailsAggregator**
+  
   **FoodSearchProsumer**
+  
   **RatingUpdaterRESTService**
+  
   **ReviewDataService**
+  
   **ReviewEditorProsumer**
 
   
