@@ -20,7 +20,7 @@ public class SearchImpl implements Search {
     private static final String API_KEY = "98f6a6aac1d2b1559580d0057468a38a";
     private static final String EdamamFoodSearchEndpoint = "https://api.edamam.com/api/food-database/v2/parser";
 
-    // Method to search for food items based on a query
+    // Method to search for food items based on a query , example https://api.edamam.com/api/food-database/v2/parser?app_id=7ad71579&app_key=98f6a6aac1d2b1559580d0057468a38a&ingr=pasta
     @Override
     public List<Result> searchFood(String query) {
         // Construct the URL for the API request
