@@ -38,19 +38,19 @@ private static final String API_KEY = "ENTER YOUR APP KEY";
 
 #### 5. Open Eclipse IDE, create a new Tomcat instance and run all the services:
 
-  **AuthService**
+  ***AuthService***
   
-  **FoodDetailsProsumer**
+  ***FoodDetailsProsumer***
   
-  **FoodDetailsAggregator**
+  ***FoodDetailsAggregator***
   
-  **FoodSearchProsumer**
+  ***FoodSearchProsumer***
   
-  **RatingUpdaterRESTService**
+  ***RatingUpdaterRESTService***
   
-  **ReviewDataService**
+  ***ReviewDataService***
   
-  **ReviewEditorProsumer**
+  ***ReviewEditorProsumer***
 
   
 #### 6. Install Android application
@@ -94,7 +94,7 @@ This documentation contains all the test results, including screenshots and Post
 
 ```
 
-![Aggregate Ratings](.Presentation/Project%20Postman%20API%20Testing/Soap%20Food%20Detail%20Aggregator/fooddetailsaggregator.png)
+![Aggregate Ratings](![Aggregate Ratings](.Presentation/Project%20Postman%20API%20Testing/Soap%20Food%20Detail%20Aggregator/fooddetailsaggregator.png)
 
 
 ### Food Search Prosumer
@@ -116,7 +116,8 @@ This documentation contains all the test results, including screenshots and Post
 
 ```
 
-![Aggregate Ratings](.Presentation/Project%20Postman%20API%20Testing/Soap%20Food%20Search%20Prosumer/FoodSearchProsumer.png)
+![Search Food](.Presentation/Project%20Postman%20API%20Testing/Soap%20Food%20Search%20Prosumer/FoodSearchProsumer.png)
+
 
 
 ## REST Services
@@ -139,8 +140,8 @@ This documentation contains all the test results, including screenshots and Post
   }
 }
 ```
-
 ![login with user does not exist](.Presentation/Project%20Postman%20API%20Testing/Rest%20Authentification/login%20with%20user%20does%20not%20exist.png)
+
 
 #### 2. Login with User Exists
 
@@ -161,6 +162,7 @@ This documentation contains all the test results, including screenshots and Post
 
 ![login with user exist](.Presentation/Project%20Postman%20API%20Testing/Rest%20Authentification/login%20with%20user%20exist.png)
 
+
 #### 3. Check User
 
 ```json
@@ -180,6 +182,7 @@ This documentation contains all the test results, including screenshots and Post
 ```
 
 ![Check user exist](.Presentation/Project%20Postman%20API%20Testing/Rest%20Authentification/Check%20user.png)
+
 
 #### 4. Sign Up
 
@@ -245,8 +248,7 @@ This documentation contains all the test results, including screenshots and Post
 
 
 ```
-
-![Add Rating Async](.Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20addRating.png)
+![Add Rating Async](.Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20addRating%20ASYNC.png)
 
 #### 3. Get All Rating
 
@@ -278,7 +280,7 @@ This documentation contains all the test results, including screenshots and Post
 
 ```
 
-![Get Global Score](.Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20GetGlobalScore.png)
+![Get Global Score](.Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20getGlobarScore.png)
 
 #### 5. Get Rating Averages
 
@@ -293,7 +295,7 @@ This documentation contains all the test results, including screenshots and Post
 
 ```
 
-![Get Global Score](.Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20GetRatingAverages.png)
+![Get Rating Averages](.Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20getRatingAvgs.png)
 
 ### Review Data
 
@@ -329,7 +331,7 @@ This documentation contains all the test results, including screenshots and Post
 
 ```
 
-![Get Reviews by User ID](.Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/GetReviewsByUserID.png)
+![Get Reviews by User ID](.Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/GetReviewsByuserID.png)
 
 #### 3. Get Reviews by User ID and Food ID
 
@@ -348,7 +350,7 @@ This documentation contains all the test results, including screenshots and Post
 
 ```
 
-![Get Reviews by User ID](.Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/GetReviewsByfoodIDandByUserID.png)
+![Get Reviews by User ID and Food ID](.Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/GetReviewsByfoodIDandByUserID.png)
 
 #### 4. Insert Review
 
@@ -369,7 +371,7 @@ This documentation contains all the test results, including screenshots and Post
 
 ```
 
-![Get Reviews by User ID](.Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/insert%20Review.png)
+![Insert Review](.Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/insert%20Review.png)
 
 
 #### Project Structure
