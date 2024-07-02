@@ -94,7 +94,7 @@ This documentation contains all the test results, including screenshots and Post
 
 ```
 
-![Aggregate Ratings](![Aggregate Ratings](Presentation/Project%20Postman%20API%20Testing/Soap%20Food%20Detail%20Aggregator/fooddetailsaggregator.png)
+![Aggregate Ratings](![Aggregate Ratings](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Soap%20Food%20Detail%20Aggregator/fooddetailsaggregator.png)
 
 
 ### Food Search Prosumer
