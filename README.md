@@ -119,7 +119,7 @@ You can find more details in the [Documentation folder](https://github.com/adam-
 
 ```
 
-![Search Food](Presentation/Project%20Postman%20API%20Testing/Soap%20Food%20Search%20Prosumer/FoodSearchProsumer.png)
+![Search Food](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Soap%20Food%20Search%20Prosumer/FoodSearchProsumer.png)
 
 
 
@@ -127,24 +127,25 @@ You can find more details in the [Documentation folder](https://github.com/adam-
 
 ### Authentification
 
-#### 1. Login with User Does Not Exist
+#### 1. Sign Up
 
 ```json
 {
   "method": "POST",
-  "url": "http://localhost:8081/AuthService/rest/User/Login",
+  "url": "http://localhost:8081/AuthService/rest/User/signup",
   "headers": {
     "Content-Type": "application/x-www-form-urlencoded",
     "Accept": "application/json"
   },
   "body": {
-    "username": "test3",
-    "password": "test3"
+    "username": "newuserr",
+    "password": "newpasswordd"
   }
 }
-```
-![login with user does not exist](Presentation/Project%20Postman%20API%20Testing/Rest%20Authentification/login%20with%20user%20does%20not%20exist.png)
 
+```
+
+![Sign Up](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Rest%20Authentification/Signup.png)
 
 #### 2. Login with User Exists
 
@@ -163,10 +164,28 @@ You can find more details in the [Documentation folder](https://github.com/adam-
 }
 ```
 
-![login with user exist](Presentation/Project%20Postman%20API%20Testing/Rest%20Authentification/login%20with%20user%20exist.png)
+![login with user exist](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Rest%20Authentification/login%20with%20user%20exist.png)
 
 
-#### 3. Check User
+#### 3. Login with User Does Not Exist
+
+```json
+{
+  "method": "POST",
+  "url": "http://localhost:8081/AuthService/rest/User/Login",
+  "headers": {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/json"
+  },
+  "body": {
+    "username": "test3",
+    "password": "test3"
+  }
+}
+```
+![login with user does not exist](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Rest%20Authentification/login%20with%20user%20does%20not%20exist.png)
+
+#### 4. Check User
 
 ```json
 {
@@ -183,29 +202,6 @@ You can find more details in the [Documentation folder](https://github.com/adam-
 }
 
 ```
-
-![Check user exist](Presentation/Project%20Postman%20API%20Testing/Rest%20Authentification/Check%20user.png)
-
-
-#### 4. Sign Up
-
-```json
-{
-  "method": "POST",
-  "url": "http://localhost:8081/AuthService/rest/User/signup",
-  "headers": {
-    "Content-Type": "application/x-www-form-urlencoded",
-    "Accept": "application/json"
-  },
-  "body": {
-    "username": "newuserr",
-    "password": "newpasswordd"
-  }
-}
-
-```
-
-![Sign Up](Presentation/Project%20Postman%20API%20Testing/Rest%20Authentification/Sign%20up.png)
 
 
 ### Rating Updater
@@ -229,7 +225,7 @@ You can find more details in the [Documentation folder](https://github.com/adam-
 
 ```
 
-![Add Rating](Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20addRating.png)
+![Add Rating](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20addRating.png)
 
 
 #### 2. Add Rating Async
@@ -251,7 +247,7 @@ You can find more details in the [Documentation folder](https://github.com/adam-
 
 
 ```
-![Add Rating Async](Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20addRating%20ASYNC.png)
+![Add Rating Async](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20addRating%20ASYNC.png)
 
 #### 3. Get All Rating
 
@@ -267,7 +263,7 @@ You can find more details in the [Documentation folder](https://github.com/adam-
 
 ```
 
-![Get All Rating](Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20GetAllRating.png)
+![Get All Rating](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20GetAllRating.png)
 
 #### 4. Get Global Score
 
@@ -283,7 +279,7 @@ You can find more details in the [Documentation folder](https://github.com/adam-
 
 ```
 
-![Get Global Score](Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20getGlobarScore.png)
+![Get Global Score](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20getGlobarScore.png)
 
 #### 5. Get Rating Averages
 
@@ -298,7 +294,7 @@ You can find more details in the [Documentation folder](https://github.com/adam-
 
 ```
 
-![Get Rating Averages](Presentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20getRatingAvgs.png)
+![Get Rating Averages](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Rest%20Rating%20Updater/GET%20getRatingAvgs.png)
 
 ### Review Data
 
@@ -317,7 +313,7 @@ You can find more details in the [Documentation folder](https://github.com/adam-
 
 ```
 
-![Get Reviews by Food ID](Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/GetReviewsByfoodID.png)
+![Get Reviews by Food ID](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/GetReviewsByfoodID.png)
 
 #### 2. Get Reviews by User ID
 
@@ -334,7 +330,7 @@ You can find more details in the [Documentation folder](https://github.com/adam-
 
 ```
 
-![Get Reviews by User ID](Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/GetReviewsByuserID.png)
+![Get Reviews by User ID](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/GetReviewsByuserID.png)
 
 #### 3. Get Reviews by User ID and Food ID
 
@@ -353,7 +349,7 @@ You can find more details in the [Documentation folder](https://github.com/adam-
 
 ```
 
-![Get Reviews by User ID and Food ID](Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/GetReviewsByfoodIDandByUserID.png)
+![Get Reviews by User ID and Food ID](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/GetReviewsByfoodIDandByUserID.png)
 
 #### 4. Insert Review
 
@@ -374,7 +370,7 @@ You can find more details in the [Documentation folder](https://github.com/adam-
 
 ```
 
-![Insert Review](Presentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/insert%20Review.png)
+![Insert Review](https://github.com/adam-bouafia/EatFit_Review-SOSE/blob/main/Documentation/Project%20Postman%20API%20Testing/Rest%20Review%20Data/insert%20Review.png)
 
 
 #### Project Structure
