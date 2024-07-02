@@ -74,6 +74,9 @@ After installing the app, you can start exploring the wide variety of foods by u
 
 This documentation contains all the test results, including screenshots and Postman collections, for the various SOAP and REST services in the project.
 
+You can find more details in the [Documentation folder](https://github.com/adam-bouafia/EatFit_Review-SOSE/tree/main/Documentation).
+
+
 ## SOAP Services
 
 ### Food Detail Aggregator
