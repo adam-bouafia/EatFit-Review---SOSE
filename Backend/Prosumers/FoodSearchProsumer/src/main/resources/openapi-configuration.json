@@ -1,0 +1,23 @@
+{
+    "resourcePackages": ["it.univaq.disim.sose"],
+    "prettyPrint": true,
+    "cacheTTL": 0,
+    "openAPI": {
+        "info": {
+            "version": "1.0.0",
+            "title": "FoodSearchProsumer",
+            "description": "This service provides search functionality for food items",
+            "contact": {"email": "cxf-dev@apache.org"},
+            "license": {
+                "name": "Apache 2.0",
+                "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+            }
+        },
+        "servers": [
+            {
+                "url": "http://localhost:8765/api/foodsearchprosumer"
+            }
+        ]
+    },
+    "userDefinedOptions": {"support.swagger.ui": true}
+}

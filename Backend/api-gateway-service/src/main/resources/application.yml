@@ -1,0 +1,65 @@
+server:
+  port: ${SERVER_PORT:8765}
+
+spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:local}
+  zipkin:
+    base-url: http://${ZIPKIN_HOST:localhost:9411}
+    enabled: true
+    service:
+      name: EatFit-api-gateway-service
+    message-timeout: 10
+  sleuth:
+    sampler:
+      probability: 1.0
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  security:
+    user:
+      name: admin
+      password: admin    
+
+zuul:
+  sensitiveHeaders:
+  host:
+    socket-timeout-millis: 30000
+    connect-timeout-millis: 30000
+  prefix: /api
+  routes:
+    fooddetailsaggregator-service:
+      path: /fooddetailsaggregatorservice/**
+      serviceId: Eatfit-FoodDetailsAggregator-microservices
+    foodsearchprosumer:
+      path: /foodsearchprosumer/**
+      serviceId: EatFit-FoodSearchProsumer
+    revieweditorprosumer:
+      path: /revieweditorprosumer/**
+      serviceId: EatFit-ReviewEditorProsumer
+    authservice:
+      path: /authservice/**
+      serviceId: EatFit-AuthService
+    reviewdataservice:
+      path: /reviewdataservice/**
+      serviceId: EatFit-ReviewDataService
+    ratingupdaterservice:
+      path: /ratingupdaterservice/**
+      serviceId: EatFit-RatingUpdaterService
+  ribbon:
+    eager-load:
+      enabled: true
+  ribbon-isolation-strategy: THREAD
+
+ribbon:
+  ConnectTimeout: 10000
+  ReadTimeout: 60000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 40000

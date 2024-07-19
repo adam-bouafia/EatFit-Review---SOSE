@@ -36,7 +36,7 @@ lib/
 
 # Java
 *.class
-*.war
+*.jar
 *.ear
 *.jar
 
@@ -53,7 +53,7 @@ release.properties
 build/
 
 # Java Web
-*.war
+*.jar
 *.ear
 
 # Java Logs

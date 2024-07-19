@@ -1,5 +1,12 @@
 package it.univaq.disim.sose.model;
+import lombok.Data;
+import org.springframework.data.domain.Pageable;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.Link;
 
+
+
+@Data
 // This class represents the rating data for a specific food item provided by a user
 public class RatingData {
 

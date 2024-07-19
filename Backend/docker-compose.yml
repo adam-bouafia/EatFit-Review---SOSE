@@ -1,0 +1,183 @@
+services:
+
+  # Consul Discovery Service
+  eatfit-consul-discovery:
+    hostname: eatfit-consul-discovery
+    image: consul:1.10.0
+    container_name: eatfit-consul-discovery
+    restart: always
+    ports:
+      - "8500:8500"                           # Exposing port 8500
+    networks:
+      - eatfit-app-network
+
+  # Zuul API Gateway Service
+  eatfit-api-gateway-server:
+    build:
+      context: ./api-gateway-service
+      args:
+        JAR_FILE: EatFit-api-gateway-service-0.0.1-SNAPSHOT.jar
+      dockerfile: Dockerfile
+    image: eatfit-api-gateway-server
+    container_name: eatfit-api-gateway-server
+    hostname: eatfit-api-gateway-server
+    ports:
+      - "8765:8765"                           # Exposing port 8765
+    networks:
+      - eatfit-app-network
+    environment:
+      - SERVER_PORT=8765
+      - ZIPKIN_HOST=eatfit-zipkin:9411
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_CLOUD_CONSUL_HOST=eatfit-consul-discovery
+      - SPRING_CLOUD_CONSUL_PORT=8500
+
+      
+  # Food Details Aggregator Service
+  eatfit-fooddetailsaggregator-service:
+    build:
+      context: ./microservices/FoodDetailsAggregator
+      args:
+        JAR_FILE: Eatfit-FoodDetailsAggregator-microservicess.jar
+      dockerfile: Dockerfile
+    image: eatfit-fooddetailsaggregator-service
+    container_name: eatfit-fooddetailsaggregator-service
+    hostname: eatfit-fooddetailsaggregator-service
+    ports:
+      - "4001:4001"                           # Exposing port 4001
+    networks:
+      - eatfit-app-network
+    environment:
+      - SERVER_PORT=4001
+      - ZIPKIN_HOST=eatfit-zipkin:9411
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_CLOUD_CONSUL_HOST=eatfit-consul-discovery
+      - SPRING_CLOUD_CONSUL_PORT=8500
+
+
+  # Food Search Prosumer
+  eatfit-foodsearchprosumer:
+    build:
+      context: ./prosumers/FoodSearchProsumer
+      args:
+        JAR_FILE: EatFit-FoodSearch-Prosumer.jar
+      dockerfile: Dockerfile
+    image: eatfit-foodsearchprosumer
+    container_name: eatfit-foodsearchprosumer
+    hostname: eatfit-foodsearchprosumer
+    ports:
+      - "5001:5001"                           # Exposing port 5001
+    networks:
+      - eatfit-app-network
+    environment:
+      - SERVER_PORT=5001
+      - ZIPKIN_HOST=eatfit-zipkin:9411
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_CLOUD_CONSUL_HOST=eatfit-consul-discovery
+      - SPRING_CLOUD_CONSUL_PORT=8500
+
+
+  # Review Editor Prosumer
+  eatfit-revieweditorprosumer:
+    build:
+      context: ./prosumers/ReviewEditorProsumer
+      args:
+        JAR_FILE: EatFit-ReviewEditor-prosumer.jar
+      dockerfile: Dockerfile
+    image: eatfit-revieweditorprosumer
+    container_name: eatfit-revieweditorprosumer
+    hostname: eatfit-revieweditorprosumer
+    ports:
+      - "6711:6711"                           # Exposing port 6711
+    networks:
+      - eatfit-app-network
+    environment:
+      - SERVER_PORT=6711
+      - ZIPKIN_HOST=eatfit-zipkin:9411
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_CLOUD_CONSUL_HOST=eatfit-consul-discovery
+      - SPRING_CLOUD_CONSUL_PORT=8500
+
+      
+  # Review Data Service
+  eatfit-reviewdataservice:
+    build:
+      context: ./services/ReviewDataService
+      args:
+        JAR_FILE: EatFit-ReviewData-service.jar
+      dockerfile: Dockerfile
+    image: eatfit-reviewdataservice
+    container_name: eatfit-reviewdataservice
+    hostname: eatfit-reviewdataservice
+    ports:
+      - "7001:7001"                           # Exposing port 7001
+    networks:
+      - eatfit-app-network
+    environment:
+      - SERVER_PORT=7001
+      - ZIPKIN_HOST=eatfit-zipkin:9411
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_CLOUD_CONSUL_HOST=eatfit-consul-discovery
+      - SPRING_CLOUD_CONSUL_PORT=8500
+
+
+  # Auth Service
+  eatfit-authservice:
+    build:
+      context: ./services/AuthService
+      args:
+        JAR_FILE: EatFit-Auth-service.jar
+      dockerfile: Dockerfile
+    image: eatfit-authservice
+    container_name: eatfit-authservice
+    hostname: eatfit-authservice
+    ports:
+      - "8001:8001"                           # Exposing port 8001
+    networks:
+      - eatfit-app-network
+    environment:
+      - SERVER_PORT=8001
+      - ZIPKIN_HOST=eatfit-zipkin:9411
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_CLOUD_CONSUL_HOST=eatfit-consul-discovery
+      - SPRING_CLOUD_CONSUL_PORT=8500
+
+  # Rating Updater Service
+  eatfit-ratingupdaterservice:
+    build:
+      context: ./services/RatingUpdaterService
+      args:
+        JAR_FILE: EatFit-RatingUpdater-service.jar
+      dockerfile: Dockerfile
+    image: eatfit-ratingupdaterservice
+    container_name: eatfit-ratingupdaterservice
+    hostname: eatfit-ratingupdaterservice
+    ports:
+      - "8771:8771"                           # Exposing port 8771
+    networks:
+      - eatfit-app-network
+    environment:
+      - SERVER_PORT=8771
+      - ZIPKIN_HOST=eatfit-zipkin:9411
+      - SPRING_PROFILES_ACTIVE=docker
+      - SPRING_CLOUD_CONSUL_HOST=eatfit-consul-discovery
+      - SPRING_CLOUD_CONSUL_PORT=8500
+
+  # Tracing Service (Zipkin)
+  eatfit-zipkin:
+    image: openzipkin/zipkin
+    container_name: eatfit-zipkin
+    hostname: eatfit-zipkin
+    ports:
+      - "9411:9411"                           # Exposing port 9411
+    networks:
+      - eatfit-app-network
+
+# Define named volumes
+volumes:
+  eatfit-db-volume:
+
+# Define network
+networks:
+  eatfit-app-network:
+    driver: bridge

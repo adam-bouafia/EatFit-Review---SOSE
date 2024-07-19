@@ -1,5 +1,12 @@
 package it.univaq.disim.sose.model;
+import lombok.Data;
+import org.springframework.data.domain.Pageable;
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.Link;
 
+
+
+@Data
 public class GlobalScoreData {
 
     // Unique identifier for the food item

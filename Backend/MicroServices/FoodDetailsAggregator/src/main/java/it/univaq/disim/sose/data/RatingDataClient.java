@@ -10,10 +10,13 @@ import org.apache.cxf.jaxrs.client.WebClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 import it.univaq.disim.sose.model.GlobalScoreData;
 import it.univaq.disim.sose.model.RatingData;
 import it.univaq.disim.sose.utils.Utility;
 
+@Service
 public class RatingDataClient {
 
 	// URLs to access the RatingDataService REST endpoints
